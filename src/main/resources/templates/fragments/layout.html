@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(title, content)">
+
+    <head th:replace="~{fragments/head :: head(${title})}"> </head>
+
+    <body class="bg-gray-900 text-gray-400 flex flex-col min-h-screen">
+
+        <h2 th:replace="~{fragments/header :: title}"></h2>
+
+        <div class="flex grow">
+            <div class="w-2/12 flex flex-col">
+                <header class="flex flex-col grow bg-gray-950 border-r-2 border-gray-500">
+                    <nav th:replace="~{fragments/nav :: nav}" ></nav>
+                </header>
+            </div>
+
+            <main th:replace="${content}"></main>
+        </div>
+
+        <footer th:replace="~{fragments/footer :: footer}"></footer>
+
+    </body>
+
+</html>

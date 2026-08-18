@@ -1,0 +1,52 @@
+<nav th:fragment="nav"
+     xmlns:th="http://www.thymeleaf.org" >
+
+    <ul class="py-3 px-5 flex flex-col gap-1">
+        <li class="flex items-center gap-5 border-b-2 border-gray-950 hover:border-b-2 hover:border-gray-700">
+            <i class="bi bi-house text-2xl text-sky-500 "></i>
+            <a th:href="@{/}"
+               class="w-full inline-block  py-3 text-lg italic
+               font-bold text-gray-400">
+                Home
+            </a>
+        </li>
+
+        <li class="flex items-center gap-5 border-b-2 border-gray-950 hover:border-b-2 hover:border-gray-700">
+            <i class="bi bi-box2 text-2xl text-sky-500 "></i>
+            <a th:href="@{/products}"
+               class="w-full inline-block  py-3 text-lg italic
+               font-bold text-gray-400">
+                Products
+            </a>
+        </li>
+
+        <li class="flex items-center gap-5 border-b-2 border-gray-950 hover:border-b-2 hover:border-gray-700">
+            <i class="bi bi-person text-2xl text-sky-500 "></i>
+            <a th:href="@{/employees}"
+               class="w-full inline-block  py-3 text-lg italic
+               font-bold text-gray-400">
+                Employees
+            </a>
+        </li>
+
+        <li class="flex items-center gap-5 border-b-2 border-gray-950 hover:border-b-2 hover:border-gray-700">
+            <i class="bi bi-clipboard2-check text-2xl text-sky-500 "></i>
+            <a th:href="@{/categories}"
+               class="w-full inline-block  py-3 text-lg italic
+               font-bold text-gray-400">
+                Categories
+            </a>
+        </li>
+
+        <li class="flex items-center gap-5 border-b-2 border-gray-950 hover:border-b-2 hover:border-gray-700">
+            <i class="bi bi-arrow-down-up text-2xl text-sky-500 "></i>
+            <a th:href="@{/movements}"
+               class="w-full inline-block  py-3 text-lg italic
+               font-bold text-gray-400">
+                Movements
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
