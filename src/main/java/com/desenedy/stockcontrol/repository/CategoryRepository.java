@@ -1,10 +1,11 @@
 package com.desenedy.stockcontrol.repository;
 
+import com.desenedy.stockcontrol.domain.entity.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface Category extends JpaRepository<Category, Long> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
     List<Category> findByActiveTrue();
 
