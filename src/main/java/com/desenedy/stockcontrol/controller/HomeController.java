@@ -23,12 +23,7 @@ public class HomeController {
 
 //    category
 
-    @GetMapping("/categories")
-    public String HomeCategory() {
 
-        return "category/category";
-
-    }
 
 //    employee
 

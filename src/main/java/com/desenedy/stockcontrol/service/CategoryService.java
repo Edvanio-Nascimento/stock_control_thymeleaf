@@ -29,6 +29,7 @@ public class CategoryService {
         }
 
         Category category = CategoryMapper.toEntity(request);
+        category.setActive(Boolean.TRUE);
         repository.save(category);
 
     }
