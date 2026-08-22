@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout('Home', ~{::content})}">
+
+    <body class="bg-gray-900 text-gray-400">
+
+        <div th:fragment="content" class="w-10/12 p-5 my-auto">
+
+            <div class="w-full max-w-4xl mx-auto">
+                <h2 class="text-2xl italic font-black text-sky-500 mb-5">
+                    Category Details
+                </h2>
+
+                <div class="flex flex-col gap-5 border-2 border-gray-500 p-5 rounded-lg">
+                   <div class="flex gap-1 items-center">
+                       <span class="text-xl font-black italic"> ID: </span>
+                       <p th:text="${details.id}" class="font-black italic text-lg text-white"></p>
+                   </div>
+
+                    <div class="flex gap-1 items-center">
+                        <span class="text-xl font-black italic"> Name: </span>
+                        <p th:text="${details.name}" class="font-black italic text-lg text-white"></p>
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="text-xl font-black italic"> Description: </span>
+                        <p th:text="${details.description}" class="font-black italic text-lg text-white"></p>
+                    </div>
+
+                    <div class="flex gap-1 items-center">
+                        <span class="text-xl font-black italic"> Active: </span>
+                        <p th:text="${details.active    }" class="font-black italic text-lg text-white"></p>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex justify-end">
+
+                    <a th:href="@{/categories}"
+                       class="border py-2 px-5  rounded-lg bg-gray-500 text-white font-black italic border-2 border-gray-900 hover:bg-gray-700
+                              flex items-center transition-all duration-1000 gap-1"
+                    >
+                        <i class="bi bi-arrow-90deg-left font-black text-lg"></i>
+                        Back
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>
+
+
